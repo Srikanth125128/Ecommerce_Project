@@ -1,0 +1,13 @@
+<h1>Product List</h1>
+<ul>
+    {% for product in products %}
+        <li>
+            <h2>{{ product.name }} Srikanth</h2>
+            <strong>Description:</strong> {{ product.description }} <br>
+            <strong>Price:</strong> ${{ product.price }} <br>
+            <hr>  <!-- Adds a horizontal line between products -->
+        </li>
+    {% empty %}
+        <p>No products available.</p>
+    {% endfor %}
+</ul>

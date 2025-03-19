@@ -1,0 +1,14 @@
+<h1>Animal List</h1>
+<ul>
+    {% for animal in animals %}
+        <li>
+           <h2>{{ animal.name }}</h2>
+            <strong>Description:</strong> {{ animal.description }} <br>
+            <strong>Price:</strong> ${{ animal.price }} <br>
+            <hr>  <!-- Adds a horizontal line between animals -->
+        </li>
+    {% empty %}
+        <p>No animals available.</p>
+    {% endfor %}
+</ul>
+
